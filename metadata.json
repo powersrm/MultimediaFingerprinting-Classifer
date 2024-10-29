@@ -1,171 +1,171 @@
 {
     "output_19.mp3": {
-        "original_text_length": 12300,
+        "original_text_length": 11702,
         "embedding_dimensions": 384,
         "duration": 1363.9836734693877
     },
     "output_7_10M.mp3": {
-        "original_text_length": 12446,
+        "original_text_length": 9828,
         "embedding_dimensions": 384,
         "duration": 1282.488
     },
     "output_24.mp3": {
-        "original_text_length": 2325,
+        "original_text_length": 2076,
         "embedding_dimensions": 384,
         "duration": 734.1714285714286
     },
     "output_18.mp3": {
-        "original_text_length": 10804,
+        "original_text_length": 10661,
         "embedding_dimensions": 384,
         "duration": 1407.888
     },
     "output_14_10M.mp3": {
-        "original_text_length": 17016,
+        "original_text_length": 16284,
         "embedding_dimensions": 384,
         "duration": 1425.984
     },
     "output_23_10M.mp3": {
-        "original_text_length": 5561,
+        "original_text_length": 2076,
         "embedding_dimensions": 384,
         "duration": 734.1714285714286
     },
     "output_23.mp3": {
-        "original_text_length": 3603,
+        "original_text_length": 2076,
         "embedding_dimensions": 384,
         "duration": 734.1714285714286
     },
     "output_20.mp3": {
-        "original_text_length": 13172,
+        "original_text_length": 13437,
         "embedding_dimensions": 384,
         "duration": 1420.8783673469388
     },
     "output_21.mp3": {
-        "original_text_length": 29902,
+        "original_text_length": 29550,
         "embedding_dimensions": 384,
         "duration": 2673.792
     },
     "output_15_10M.mp3": {
-        "original_text_length": 16699,
+        "original_text_length": 16282,
         "embedding_dimensions": 384,
         "duration": 1425.984
     },
     "output_4.mp3": {
-        "original_text_length": 8920,
+        "original_text_length": 15094,
         "embedding_dimensions": 384,
         "duration": 1378.104
     },
     "output_21_10M.mp3": {
-        "original_text_length": 30905,
+        "original_text_length": 29550,
         "embedding_dimensions": 384,
         "duration": 2673.792
     },
     "output_7.mp3": {
-        "original_text_length": 11815,
+        "original_text_length": 9828,
         "embedding_dimensions": 384,
         "duration": 1282.488
     },
     "output_17_10M.mp3": {
-        "original_text_length": 13399,
+        "original_text_length": 13577,
         "embedding_dimensions": 384,
         "duration": 1393.656
     },
     "output_4_10M.mp3": {
-        "original_text_length": 9016,
+        "original_text_length": 15094,
         "embedding_dimensions": 384,
         "duration": 1378.104
     },
     "output_2.mp3": {
-        "original_text_length": 12719,
+        "original_text_length": 13193,
         "embedding_dimensions": 384,
         "duration": 1377.432
     },
     "output_16_10M.mp3": {
-        "original_text_length": 2510,
+        "original_text_length": 2733,
         "embedding_dimensions": 384,
         "duration": 1447.152
     },
     "output_20_10M.mp3": {
-        "original_text_length": 13575,
+        "original_text_length": 13450,
         "embedding_dimensions": 384,
         "duration": 1420.8783673469388
     },
     "output_9_10M.mp3": {
-        "original_text_length": 8622,
+        "original_text_length": 8426,
         "embedding_dimensions": 384,
         "duration": 1367.472
     },
     "output_13_10M.mp3": {
-        "original_text_length": 4970,
+        "original_text_length": 13648,
         "embedding_dimensions": 384,
         "duration": 1377.72
     },
     "output_8_10M.mp3": {
-        "original_text_length": 11462,
+        "original_text_length": 10218,
         "embedding_dimensions": 384,
         "duration": 1282.488
     },
     "output_8.mp3": {
-        "original_text_length": 11068,
+        "original_text_length": 10265,
         "embedding_dimensions": 384,
         "duration": 1282.488
     },
     "output_9.mp3": {
-        "original_text_length": 8900,
+        "original_text_length": 8258,
         "embedding_dimensions": 384,
         "duration": 1367.472
     },
     "output_24_10M.mp3": {
-        "original_text_length": 2506,
+        "original_text_length": 2076,
         "embedding_dimensions": 384,
         "duration": 734.1714285714286
     },
     "output_11.mp3": {
-        "original_text_length": 4116,
+        "original_text_length": 12259,
         "embedding_dimensions": 384,
         "duration": 1377.072
     },
     "output_19_10M.mp3": {
-        "original_text_length": 12163,
+        "original_text_length": 11662,
         "embedding_dimensions": 384,
         "duration": 1363.9836734693877
     },
     "output_13.mp3": {
-        "original_text_length": 5015,
+        "original_text_length": 13856,
         "embedding_dimensions": 384,
         "duration": 1377.72
     },
     "output_18_10M.mp3": {
-        "original_text_length": 11098,
+        "original_text_length": 10661,
         "embedding_dimensions": 384,
         "duration": 1407.888
     },
     "output_16.mp3": {
-        "original_text_length": 2433,
+        "original_text_length": 2572,
         "embedding_dimensions": 384,
         "duration": 1447.152
     },
     "output_17.mp3": {
-        "original_text_length": 13677,
+        "original_text_length": 13577,
         "embedding_dimensions": 384,
         "duration": 1393.656
     },
     "output_2_10M.mp3": {
-        "original_text_length": 7155,
+        "original_text_length": 13261,
         "embedding_dimensions": 384,
         "duration": 1377.432
     },
     "output_15.mp3": {
-        "original_text_length": 16991,
+        "original_text_length": 16269,
         "embedding_dimensions": 384,
         "duration": 1425.984
     },
     "output_11_10M.mp3": {
-        "original_text_length": 5788,
+        "original_text_length": 12259,
         "embedding_dimensions": 384,
         "duration": 1377.072
     },
     "output_14.mp3": {
-        "original_text_length": 16773,
+        "original_text_length": 16290,
         "embedding_dimensions": 384,
         "duration": 1425.984
     }
