@@ -79,7 +79,7 @@ for i in range(len(file_names)):
 with open('metadata.json', 'w') as f:
     json.dump(metadata, f, indent=4)
 
-with open('video_similarities.json', 'w') as f:
+with open('audio_similarities.json', 'w') as f:
     json.dump(similarities, f, indent=4)
 
 print("Metadata extraction and similarity calculation completed.")

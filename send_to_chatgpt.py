@@ -20,9 +20,25 @@ def load_json(filename, fallback_value):
 
 
 # Load data
-metadata = load_json('metadata.json', {5})
-video_similarities = load_json('video_similarities.json', {5})
-scene_similarities = load_json('scene_similarities.json', {5})
+video_similarities = load_json('audio_similarities.json', {5})
+
+
+def load_json(filename, fallback_value):
+    """Loads JSON from a file, with fallback in case of errors."""
+    try:
+        with open(filename, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"{filename} file not found.")
+        return fallback_value
+    except json.JSONDecodeError:
+        print(f"Error decoding JSON from {filename}.")
+        return fallback_value
+
+
+# Load data
+metadata = load_json('metadata.json', {})
+audio_similarities = load_json('audio_similarities.json', {})
 
 
 def filter_similarities(similarities, threshold=0.99):
@@ -32,9 +48,8 @@ def filter_similarities(similarities, threshold=0.99):
     return filtered
 
 
-# Filter for identical video and scene pairs
-filtered_video_similarities = filter_similarities(video_similarities, threshold=0.99)
-filtered_scene_similarities = filter_similarities(scene_similarities, threshold=0.95)
+# Filter for identical video pairs
+filtered_audio_similarities = filter_similarities(video_similarities, threshold=0.95)
 
 
 def format_similarities(similarities, similarity_type):
@@ -46,34 +61,28 @@ def format_similarities(similarities, similarity_type):
 
 
 # Print filtered similarities
-print(format_similarities(filtered_video_similarities, "video"))
-print(format_similarities(filtered_scene_similarities, "scene"))
+print(format_similarities(filtered_audio_similarities, "video"))
 
-# Combine metadata, video similarities, and scene similarities into a request
+# Combine metadata and video similarities into a request
 metadata_str = json.dumps(metadata)
-video_similarities_str = json.dumps(filtered_video_similarities)
-scene_similarities_str = json.dumps(filtered_scene_similarities)
+audio_similarities_str = json.dumps(filtered_audio_similarities)
 
 # Check total length and truncate if too large
 max_message_tokens = 8000 - 1000  # Reserve tokens for the system message and completion
-total_length = len(metadata_str) + len(video_similarities_str) + len(scene_similarities_str)
+total_length = len(metadata_str) + len(audio_similarities_str)
 
 if total_length > max_message_tokens:
     # Truncate based on proportional length
     metadata_str = metadata_str[:int(max_message_tokens * (len(metadata_str) / total_length))] + "..."
-    video_similarities_str = video_similarities_str[
-                             :int(max_message_tokens * (len(video_similarities_str) / total_length))] + "..."
-    scene_similarities_str = scene_similarities_str[
-                             :int(max_message_tokens * (len(scene_similarities_str) / total_length))] + "..."
+    video_similarities_str = audio_similarities_str[
+                             :int(max_message_tokens * (len(audio_similarities_str) / total_length))] + "..."
 
 # Combine content for API request
 combined_content = (
-    f"Metadata: {metadata_str}, "
-    f"Video Similarities: {video_similarities_str}, "
-    f"Scene Similarities: {scene_similarities_str}. "
-    "Analyze this data to identify all pairs of assets (both video and scene) with a similarity score of 0.95 or higher. "
-    "List each pair explicitly and provide suggestions on how to reduce storage size for these similar assets. "
-    "Also, recommend additional metadata that might help in identifying similar assets, focusing on attributes that can enhance retrieval efficiency."
+    f"Audio Similarities: {audio_similarities_str}. "
+    "Analyze this data to identify all pairs of assets with a similarity score of 0.95 or higher. "
+    "List each pair explicitly, explain why the assets might be considered similar, and provide suggestions to reduce storage size for these similar assets, such as deduplication or compression. "
+    "Additionally, recommend detailed methods for managing this content efficiently, such as organizing metadata or leveraging cloud storage features."
 )
 
 # Set headers for the request
@@ -88,7 +97,7 @@ payload = {
     "messages": [
         {
             "role": "system",
-            "content": "You are an assistant that helps optimize multimedia storage and identifies similar assets based on cosine similarity."
+            "content": "You are an assistant specializing in optimizing multimedia storage and managing content similarities."
         },
         {
             "role": "user",
