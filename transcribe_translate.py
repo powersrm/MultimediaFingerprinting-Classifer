@@ -8,11 +8,13 @@ import json
 # Load Whisper model (you can also use the 'large' version for better results) MAYBE - https://huggingface.co/openai/whisper-large-v3#:~:text=The%20Whisper%20large%2Dv3%20model,epochs%20over%20this%20mixture%20dataset.
 model = load_model("large")
 
+
 # Function to split audio into chunks
 def split_audio(audio_path, chunk_length_ms=30000):  # 30-second chunks
     audio = AudioSegment.from_file(audio_path)
     chunks = make_chunks(audio, chunk_length_ms)
     return chunks
+
 
 # Function to transcribe and translate each audio chunk
 def transcribe_and_translate(audio_chunk, chunk_index, audio_folder, file_name):
@@ -32,6 +34,7 @@ def transcribe_and_translate(audio_chunk, chunk_index, audio_folder, file_name):
         print(f"Translation error on chunk {chunk_index}: {e}")
 
     return original_text, translated_text
+
 
 # Folder containing audio files
 audio_folder = 'audio_extracted'
